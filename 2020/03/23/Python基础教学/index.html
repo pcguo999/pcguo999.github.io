@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="利用码云搭建图床, PCGuo">
+    <meta name="keywords" content="Python基础, PCGuo">
     <meta name="description" content="PCGuo的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>利用码云搭建图床 | PCGuo</title>
+    <title>Python基础 | PCGuo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -263,12 +263,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/pcguo999/images-bed/raw/master/images/blog-images/利用码云搭建图床/img.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/pcguo999/images-bed/raw/master/images/blog-images/python基础/img.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">利用码云搭建图床</h1>
+                    <h1 class="description center-align post-title">Python基础</h1>
                 </div>
             </div>
         </div>
@@ -385,16 +385,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/Gitee/">
-                                <span class="chip bg-color">Gitee</span>
-                            </a>
-                        
-                            <a href="/tags/OpenAPI/">
-                                <span class="chip bg-color">OpenAPI</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -405,8 +397,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Gitee/" class="post-category">
-                                Gitee
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -418,7 +410,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-22
+                    2020-03-23
                 </div>
                 
 
@@ -427,14 +419,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -450,41 +442,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>图床一般是指储存图片的服务器。因为自建博客需要图片服务器,考虑到用本机的图片服务器需要考虑数据备份链接路径等一系列问题,还是推荐使用第三方的服务。这里讲解的是用Gitee搭建图床，从而让博客添加图片。</p>
-<h2 id="一、配置环境"><a href="#一、配置环境" class="headerlink" title="一、配置环境"></a>一、配置环境</h2><ol>
-<li><p>需要一个码云账户（没有的注册一个）</p>
-</li>
-<li><p>新建一个仓库，配置SSH码</p>
-</li>
-<li><p>本地安装Git，用来提交本地代码到远程仓库</p>
-<p>具体可跳转至Hexo搭建博客</p>
-</li>
-</ol>
-<h2 id="二、方式一-新建文件方式上传"><a href="#二、方式一-新建文件方式上传" class="headerlink" title="二、方式一 新建文件方式上传"></a>二、方式一 新建文件方式上传</h2><p>在码云上搭建一个空的远程仓库,然后建一个文件夹</p>
-<p>注意：不要轻易修改仓库的名字和文件夹的名字</p>
-<p>然后点击上传文件,进入上传页面,上传一张图片,这个就是我们以后会使用的图床界面</p>
-<p><img src="http://imist.gitee.io/res/upload_images/img_gitee_upload.png" alt="img"></p>
-<p>其实这个时候可以使用码云库的链接访问了,如果你的库是<code>public</code>的</p>
-<p>你的链接类似这样<code>https://gitee.com/iMist/res/raw/master/upload_images/img_gitee_pages.png</code></p>
-<blockquote>
-<p>注意：图片链接需要将<code>blob</code>替换成<code>raw</code>,才是图片的永久链接</p>
-</blockquote>
-<p>其实这个路径可以用在博客中了,路径还算简短,但是到此为止,就太没有意思了,你用接口测试工具访问一下这个图片,每次都在几百毫秒左右,我用<code>wordpress</code>本来就放弃了<br>一部分的速度要求,现在还搞这么慢,不能忍</p>
-<h2 id="方式二-利用码云提供的Gitee-Pages搭建静态页面服务"><a href="#方式二-利用码云提供的Gitee-Pages搭建静态页面服务" class="headerlink" title="方式二:利用码云提供的Gitee Pages搭建静态页面服务"></a>方式二:利用码云提供的<code>Gitee Pages</code>搭建静态页面服务</h2><p>这个可以用来搭建静态博客<code>hexo</code>等,但是我们是要来搭建图床的<br><img src="https://imist.gitee.io/res/upload_images/img_gitee_pages.png" alt="img"></p>
-<p><img src="https://gitee.com/iMist/res/raw/master/2019/8/26/6cddcff5-99d4-4686-a43f-8fad2caf27e7.png" alt="img"></p>
-<p>点击<code>Gitee Pages</code>,将当前分支一般是master分支作为部署的分支,选择根目录（不填就行了代表整个仓库）,然后点击启动就开始部署了</p>
-<p>部署完成就可以访问之前上传的测试图片,地址像这样<code>https://imist.gitee.io/res/upload_images/img_gitee_pages.png</code></p>
-<p>保留上传链接作为快捷图床服务</p>
-<p><code>https://gitee.com/iMist/res/upload/master/upload_images</code><br>以后就可以快速打开图床了,接口测试工据测试一下,缓存生效了,速度很快,适合静态资源的保存</p>
-<p>写在最后,这种方式有点不好的就是每次都要重新部署一下服务才能访问图片,要掏钱才能推送立刻部署</p>
-<h2 id="方式三-通过码云OpenAPI自行搭建图床-推荐"><a href="#方式三-通过码云OpenAPI自行搭建图床-推荐" class="headerlink" title="方式三:通过码云OpenAPI自行搭建图床(推荐)"></a>方式三:通过码云OpenAPI自行搭建图床(推荐)</h2><p>前面两种方法相当简单,但是比较low,都免费了还方便使用git管理,管他呢,现在推荐第三种方式通过码云openapi编写代码实现上传图片并且返回<code>url ``html</code>以及<code>markdown</code>格式的链接<br>首先<br>首先了解一下码云的<code>OpenApi</code><br><a href="https://gitee.com/api/v5/swagger#/getV5ReposOwnerRepoStargazers?ex=no">码云OpenApi文档</a></p>
-<p><code>点击仓库-&gt;新建文件</code>接口文档<br><img src="https://gitee.com/iMist/res/raw/master/2019/8/26/d60f453f-589a-4d2b-87e7-2b927bac1454.png" alt="img"><br>好的,我们现在看一下文件上传接口规范<br><img src="https://gitee.com/iMist/res/raw/master/2019/8/26/37668fe3-8701-4bb9-b363-24e3fa32542b.png" alt="img"><br>这里特意提一下<code>access_token</code> 这个参数就是码云OpenApi私人令牌,可以直接在申请,但是申请的令牌只有一天的有效期,这显然不是我们需要的<br>,图片需要base64编码(暗示不可以上传大图),接口请求参考如下<br><img src="https://gitee.com/iMist/res/raw/master/2019/8/26/d703ad79-c9f8-4c31-8459-36611a06e506.png" alt="img"><br>上传图片响应<br><img src="https://gitee.com/iMist/res/raw/master/2019/8/26/07a6d01a-0fa1-47e4-9cd4-2c787a0b39f6.png" alt="img"></p>
-<p>再来介绍第二个接口,这里直接通过接口测试工具展示了,比较需要注意的是登录账号是绑定的邮箱号(POST请求,<code>Content-Type: application/x-www-form-urlencoded</code> ) ,<code>client_secret</code>和 <code>client_id</code>需要创建第三方应用获取,scope代表授权项,空格隔开</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST --data-urlencode <span class="string">"grant_type=password"</span> --data-urlencode <span class="string">"username=&#123;email&#125;"</span> --data-urlencode <span class="string">"password=&#123;password&#125;"</span> --data-urlencode <span class="string">"client_id=&#123;client_id&#125;"</span> --data-urlencode <span class="string">"client_secret=&#123;client_secret&#125;"</span> --data-urlencode <span class="string">"scope=projects user_info issues notes"</span> https://gitee.com/oauth/token</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/iMist/res/raw/master/2019/8/26/7a3cafce-dcc5-474c-b640-82d3fd581018.png" alt="img"><br>密码登录响应<br><img src="https://gitee.com/iMist/res/raw/master/2019/8/26/7c31036d-5ccc-4dd5-bb34-9e15ac0ba01d.png" alt="img"></p>
-<p>第三个接口是当 access_token 过期后（有效期为一天），你可以通过以下 refresh_token 方式重新获取 access_token（ POST请求 ）,请求响应和第二个登录接口响应一致<br><code>https://gitee.com/oauth/token?grant_type=refresh_token&amp;refresh_token={refresh_token}</code></p>
-<p>了解完这些就直接编写代码就可以了,这里我不清楚可不可以用部署的静态页面通过代码上传,没有测试过,但是我是部署了一个轻量级服务来实现的,代码这里就不发了,就是调用一下接口就行了,比较简单,看一下最终的效果(我写的页面比较low,没有润色打磨,毕竟是自己用的将就看一下)</p>
+                <h1 id="人生苦短，我用Python"><a href="#人生苦短，我用Python" class="headerlink" title="人生苦短，我用Python"></a>人生苦短，我用Python</h1><p>点击 -&gt; 进入<a href="http://pcguo999.gitee.io/python" target="_blank" rel="noopener">Python</a>,开始你的学习之旅</p>
 
             </div>
             <hr/>
@@ -510,7 +468,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitee.com/pcguo999/2020/03/22/%E5%88%A9%E7%94%A8%E7%A0%81%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">https://gitee.com/pcguo999/2020/03/22/%E5%88%A9%E7%94%A8%E7%A0%81%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</a>
+                    <a href="https://gitee.com/pcguo999/2020/03/23/Python%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6/">https://gitee.com/pcguo999/2020/03/23/Python%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,16 +506,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/Gitee/">
-                                    <span class="chip bg-color">Gitee</span>
-                                </a>
-                            
-                                <a href="/tags/OpenAPI/">
-                                    <span class="chip bg-color">OpenAPI</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                         </div>
@@ -723,9 +673,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/23/Python%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6/">
                     <div class="card-image">
@@ -742,9 +693,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -757,6 +708,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -775,18 +727,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/22/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E7%A0%81%E4%BA%91/">
+                <a href="/2020/03/22/%E5%88%A9%E7%94%A8%E7%A0%81%E4%BA%91%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/pcguo999/images-bed/raw/master/images/blog-images/Hexo搭建博客/img.jpg" class="responsive-img" alt="Hexo搭建博客-码云">
+                        <img src="https://gitee.com/pcguo999/images-bed/raw/master/images/blog-images/利用码云搭建图床/img.jpg" class="responsive-img" alt="利用码云搭建图床">
                         
-                        <span class="card-title">Hexo搭建博客-码云</span>
+                        <span class="card-title">利用码云搭建图床</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            利用Hexo上搭建博客，部署到码云,搭建属于你的博客
+                            图床一般是指储存图片的服务器。这里讲解的是用Gitee搭建图床，从而让博客添加图片。
                         
                     </div>
                     <div class="publish-info">
@@ -797,8 +749,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo/" class="post-category">
-                                    Hexo
+                            <a href="/categories/Gitee/" class="post-category">
+                                    Gitee
                                 </a>
                             
                             
@@ -814,6 +766,10 @@
                     
                     <a href="/tags/Gitee/">
                         <span class="chip bg-color">Gitee</span>
+                    </a>
+                    
+                    <a href="/tags/OpenAPI/">
+                        <span class="chip bg-color">OpenAPI</span>
                     </a>
                     
                 </div>
