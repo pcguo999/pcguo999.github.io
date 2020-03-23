@@ -529,7 +529,7 @@
 <p>版本库（Repository）</p>
 <p>工作区有个隐藏目录 .git ，这个不算工作区，而是 Git 的版本库。</p>
 <p>版本库里面的 index(stage) 文件叫暂存区，还有Git为我们自动创建的第一个分支 master ，以及指向 master 的一个指针叫做 HEAD。</p>
-<p><img src="https://img-blog.csdn.net/20180603202659766" alt="img"></p>
+<p><img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/Git-use/1.jpg" alt=""></p>
 <p>前面我们提到过，如果我们想把文件添加到Git里面时，需要分两步：</p>
 <p>第一步是用 git add 把文件添加进去，实际上就是把文件修改添加到暂存区。</p>
 <p>第二步是用 git commit 提交更改，实际上就是把暂存区的所有内容提交到当前分支。（我们现在只有唯一一个分支 master，所以现在就是往 master 分支上提交更改）</p>
@@ -542,7 +542,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</span><br><span class="line">    new file:   LICENSE</span><br><span class="line">    modified:   readme.txt</span><br></pre></td></tr></table></figure>
 
 <p>现在，暂存区的状态就变成这样了：</p>
-<p><img src="https://img-blog.csdn.net/20180603204003143" alt="img"></p>
+<p><img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/Git-use/2.jpg" alt=""></p>
 <p>再使用 git commit 命令把暂存区的所有修改提交到分支：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"understand how stage works"</span></span><br><span class="line">[master e43a48b] understand how stage works</span><br><span class="line"> 2 files changed, 2 insertions(+)</span><br><span class="line"> create mode 100644 LICENSE</span><br></pre></td></tr></table></figure>
 
@@ -550,7 +550,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
 
 <p>这时候版本库就变成了这样：</p>
-<p><img src="https://img-blog.csdn.net/20180603204522746" alt="img"></p>
+<p><img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/Git-use/2.jpg" alt=""></p>
 <h2 id="九、管理修改"><a href="#九、管理修改" class="headerlink" title="九、管理修改"></a>九、管理修改</h2><p>Git 如此的优秀是因为，Git 跟踪并管理的不是文件，而是修改。</p>
 <p>我们对 readme.txt 文件进行修改：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cat readme.txt</span><br><span class="line">第一次使用Git</span><br><span class="line">第二次使用Git</span><br><span class="line">第三次使用Git</span><br><span class="line">第四次使用Git</span><br><span class="line">第五次使用Git</span><br></pre></td></tr></table></figure>
@@ -685,7 +685,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitee.com/pcguo999/2020/03/23/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">https://gitee.com/pcguo999/2020/03/23/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a>
+                    <a href="https://gitee.com/pcguo999/2020/03/23/Git-use/">https://gitee.com/pcguo999/2020/03/23/Git-use/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -895,7 +895,7 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/03/23/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+                <a href="/2020/03/23/Git-use/">
                     <div class="card-image">
                         
                         <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/Git-use/img.jpg" class="responsive-img" alt="Git使用教程">
@@ -944,10 +944,10 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/23/Python%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6/">
+                <a href="/2020/03/23/python-basics/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/python基础/img.jpg" class="responsive-img" alt="Python基础">
+                        <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/python-basics/img.jpg" class="responsive-img" alt="Python基础">
                         
                         <span class="card-title">Python基础</span>
                     </div>
