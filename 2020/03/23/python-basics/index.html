@@ -419,7 +419,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    21
+                    73
                 </div>
                 
 
@@ -443,7 +443,25 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="人生苦短，我用Python"><a href="#人生苦短，我用Python" class="headerlink" title="人生苦短，我用Python"></a>人生苦短，我用Python</h1><p>点击 -&gt; 进入<a href="http://pcguo999.gitee.io/python" target="_blank" rel="noopener">Python</a>,开始你的学习之旅</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -677,7 +695,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/23/Git-use/">
+                <a href="/2020/03/23/git-use/">
                     <div class="card-image">
                         
                         <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/Git-use/img.jpg" class="responsive-img" alt="Git使用教程">

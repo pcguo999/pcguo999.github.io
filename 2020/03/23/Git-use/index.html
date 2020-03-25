@@ -772,11 +772,29 @@ Branch <span class="token string">'master'</span> <span class="token keyword">se
 <h3 id="2、创建本地库"><a href="#2、创建本地库" class="headerlink" title="2、创建本地库"></a>2、创建本地库</h3><p>mkidir learngit //自定义文件夹<br>cd learngit<br>touch test.md //创建test.md文件<br>pwd //显示当前目录</p>
 <h3 id="3、常用CRT"><a href="#3、常用CRT" class="headerlink" title="3、常用CRT"></a>3、常用CRT</h3><p>git init //初始化代码仓库<br>git add learngit.txt                               //把所有要提交的文件修改放到暂存区<br>git commit -m ‘add a file’                      //把暂存区的所有内容提交到当前分支<br>git status                                            //查看工作区状态<br>git diff                                                //查看文件修改内容<br>git log                                                //查看提交历史<br>git log –pretty=oneline                       //单行显示<br>git reset –hard HEAD^　  //回退到上一个版本，其中（HEAD^^(上上版本),HEAD~100(往上100个版本)）<br>commit id                                          //(版本号) 可回到指定版本<br>git reflog                                           //查看历史命令</p>
 <p>其中说明【<br>工作区（Working Directory）<br>版本库（Repository） #.git<br>stage(index) 暂存区<br>master Git自动创建的分支<br>HEAD 指针】</p>
-<p>git diff HEAD – <file>                                  //查看工作区和版本库里最新版本的区别<br>git checkout – <file>                                   //用版本库的版本替换工作区的版本，无论是工作区的修改还是删除，都可以’一键还原’<br>git reset HEAD <file>                                   //把暂存区的修改撤销掉，重新放回工作区。<br>git rm &lt; file &gt;                                          //删除文件，若文件已提交到版本库，不用担心误删，但是只能恢复文件到最新版本</p>
+<p>git diff HEAD – <file>                                  //查看工作区和版本库里最新版本的区别<br>git checkout – <file>                                   //用版本库的版本替换工作区的版本，无论是工作区的修改还是删除，都可以’一键还原’<br>git reset HEAD <file>                                   //把暂存区的修改撤销掉，重新放回工作区。<br>git rm &lt; file &gt;                                          //删除文件，若文件已提交到版本库，不用担心误删，但是只能恢复文件到最新版本</file></file></file></p>
 <h3 id="4、创建SSH-Key，建立本地Git仓库和GitHub仓库之间的传输的秘钥"><a href="#4、创建SSH-Key，建立本地Git仓库和GitHub仓库之间的传输的秘钥" class="headerlink" title="4、创建SSH Key，建立本地Git仓库和GitHub仓库之间的传输的秘钥"></a>4、创建SSH Key，建立本地Git仓库和GitHub仓库之间的传输的秘钥</h3><p>ssh-keygen -t rsa -C ‘your email’                                                    //创建SSH Key<br>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:username/repostery.git          //关联本地仓库，远程库的名字为origin<br>//第一次把当前分支master推送到远程，-u参数不但推送，而且将本地的分支和远程的分支关联起来<br>git push -u origin master<br>git push origin master                               //把当前分支master推送到远程<br>git clone <a href="mailto:git@github.com">git@github.com</a>:username/repostery.git                            //从远程库克隆一个到本地库</p>
-<h3 id="5、分支"><a href="#5、分支" class="headerlink" title="5、分支"></a>5、分支</h3><p>git checkout -b dev                                   //创建并切换分支<br>#相当于git branch dev 和git checkout dev<br>git branch                                                //查看当前分支，当前分支前有个*号<br>git branch <name>                                   //创建分支<br>git checkout <name>                                //切换分支<br>git merge <name>                                   //合并某个分支到当前分支<br>git branch -d <name>                               //删除分支<br>git log –graph                                          //查看分支合并图<br>git merge –no-ff -m ‘message’ dev            //禁用Fast forward合并dev分支<br>git stash                                                 //隐藏当前工作现场，等恢复后继续工作<br>git stash list                                            //查看stash记录<br>git stash apply                                         //仅恢复现场，不删除stash内容<br>git stash drop                                          //删除stash内容<br>git stash pop                                           //恢复现场的同时删除stash内容<br>git branch -D <name>                              //强行删除某个未合并的分支<br>//开发新feature最好新建一个分支<br>git remote                                               //查看远程仓库<br>git remote -v                                           //查看远程库详细信息<br>git pull                                                   //抓取远程提交<br>git checkout -b branch-name origin/branch-name                  //在本地创建和远程分支对应的分支<br>git branch –set-upstream branch-name origin/branch-name   //建立本地分支和远程分支的关联</p>
-<h3 id="6、其他—标签"><a href="#6、其他—标签" class="headerlink" title="6、其他—标签"></a>6、其他—标签</h3><p>git tag v1.0                                                                      //给当前分支最新的commit打标签<br>git tag -a v0.1 -m ‘version 0.1 released’ 3628164                 //-a指定标签名，-m指定说明文字<br>git tag -s <tagname> -m ‘blabla’                                        //可以用PGP签名标签<br>git tag                                                                             //查看所有标签<br>git show v1.0                                                                   //查看标签信息<br>git tag -d v0.1                                                                 //删除标签<br>git push origin <tagname>                                               //推送某个标签到远程<br>git push origin –tags                                                       //推送所有尚未推送的本地标签</p>
-
+<h3 id="5、分支"><a href="#5、分支" class="headerlink" title="5、分支"></a>5、分支</h3><p>git checkout -b dev                                   //创建并切换分支<br>#相当于git branch dev 和git checkout dev<br>git branch                                                //查看当前分支，当前分支前有个*号<br>git branch <name>                                   //创建分支<br>git checkout <name>                                //切换分支<br>git merge <name>                                   //合并某个分支到当前分支<br>git branch -d <name>                               //删除分支<br>git log –graph                                          //查看分支合并图<br>git merge –no-ff -m ‘message’ dev            //禁用Fast forward合并dev分支<br>git stash                                                 //隐藏当前工作现场，等恢复后继续工作<br>git stash list                                            //查看stash记录<br>git stash apply                                         //仅恢复现场，不删除stash内容<br>git stash drop                                          //删除stash内容<br>git stash pop                                           //恢复现场的同时删除stash内容<br>git branch -D <name>                              //强行删除某个未合并的分支<br>//开发新feature最好新建一个分支<br>git remote                                               //查看远程仓库<br>git remote -v                                           //查看远程库详细信息<br>git pull                                                   //抓取远程提交<br>git checkout -b branch-name origin/branch-name                  //在本地创建和远程分支对应的分支<br>git branch –set-upstream branch-name origin/branch-name   //建立本地分支和远程分支的关联</name></name></name></name></name></p>
+<h3 id="6、其他—标签"><a href="#6、其他—标签" class="headerlink" title="6、其他—标签"></a>6、其他—标签</h3><p>git tag v1.0                                                                      //给当前分支最新的commit打标签<br>git tag -a v0.1 -m ‘version 0.1 released’ 3628164                 //-a指定标签名，-m指定说明文字<br>git tag -s <tagname> -m ‘blabla’                                        //可以用PGP签名标签<br>git tag                                                                             //查看所有标签<br>git show v1.0                                                                   //查看标签信息<br>git tag -d v0.1                                                                 //删除标签<br>git push origin <tagname>                                               //推送某个标签到远程<br>git push origin –tags                                                       //推送所有尚未推送的本地标签</tagname></tagname></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -801,7 +819,7 @@ Branch <span class="token string">'master'</span> <span class="token keyword">se
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitee.com/pcguo999/2020/03/23/Git-use/">https://gitee.com/pcguo999/2020/03/23/Git-use/</a>
+                    <a href="https://gitee.com/pcguo999/2020/03/23/git-use/">https://gitee.com/pcguo999/2020/03/23/git-use/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1006,45 +1024,47 @@ Branch <span class="token string">'master'</span> <span class="token keyword">se
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/25/Untitled/">
+                <a href="/2020/03/23/git-use/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/python-basics/img.jpg" class="responsive-img" alt="123">
+                        <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/Git-use/img.jpg" class="responsive-img" alt="Git使用教程">
                         
-                        <span class="card-title">123</span>
+                        <span class="card-title">Git使用教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python基础
+                            Git是目前世界上最先进的分布式版本控制系统，在处理各种项目时都十分高效，而且非常的高大上。这篇文章是Git的使用教程。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/Git/" class="post-category">
+                                    Git
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>

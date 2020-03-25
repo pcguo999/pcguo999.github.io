@@ -517,7 +517,25 @@ hexo d   #上传到服务器</code></pre><p>注意：执行 hexo d  命令时，
 <pre class=" language-bash"><code class="language-bash">$ hexo generate 
 $ hexo deploy</code></pre>
 <p>万事OK，快试试用你的独立域名访问Hexo吧。</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -542,7 +560,7 @@ $ hexo deploy</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitee.com/pcguo999/2020/03/22/Hexo-blog/">https://gitee.com/pcguo999/2020/03/22/Hexo-blog/</a>
+                    <a href="https://gitee.com/pcguo999/2020/03/22/hexo-blog/">https://gitee.com/pcguo999/2020/03/22/hexo-blog/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -812,7 +830,7 @@ $ hexo deploy</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/21/Hexo-_config-yml/">
+                <a href="/2020/03/21/hexo-config-yml/">
                     <div class="card-image">
                         
                         
