@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo相关配置和使用, PCGuo">
+    <meta name="keywords" content="利用码云搭建图床, PCGuo">
     <meta name="description" content="PCGuo的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo相关配置和使用 | PCGuo</title>
+    <title>利用码云搭建图床 | PCGuo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -263,12 +263,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo相关配置和使用</h1>
+                    <h1 class="description center-align post-title">利用码云搭建图床</h1>
                 </div>
             </div>
         </div>
@@ -385,8 +385,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Gitee/">
+                                <span class="chip bg-color">Gitee</span>
+                            </a>
+                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/Git/">
+                                <span class="chip bg-color">Git</span>
                             </a>
                         
                     </div>
@@ -397,8 +405,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo/" class="post-category">
-                                Hexo
+                            <a href="/categories/Gitee/" class="post-category">
+                                Gitee
                             </a>
                         
                     </div>
@@ -410,7 +418,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-21
+                    2020-03-22
                 </div>
                 
 
@@ -419,14 +427,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    950
+                    771
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -442,107 +450,40 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、配置-config-yml文件"><a href="#一、配置-config-yml文件" class="headerlink" title="一、配置_config.yml文件"></a>一、配置_config.yml文件</h2><p>这个文件配置了所写博客里面的内容，这里说明了每个配置的作用</p>
-<h3 id="1-站点配置"><a href="#1-站点配置" class="headerlink" title="1.站点配置"></a>1.站点配置</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Site</span>
-<span class="token key atrule">title</span><span class="token punctuation">:</span> Hexo <span class="token comment" spellcheck="true"># 网站标题</span>
-<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 网站副标题</span>
-<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 网站描述(SEO)</span>
-<span class="token key atrule">author</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 您的名字</span>
-<span class="token key atrule">language</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 网站使用的语言</span>
-<span class="token key atrule">timezone</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 网站时区</span></code></pre>
-<h3 id="2-URL配置"><a href="#2-URL配置" class="headerlink" title="2.URL配置"></a>2.URL配置</h3><pre class=" language-yml"><code class="language-yml"># URL
-## 如果你的网站放在子目录中，请将url设置为为'http://yoursite.com/child'，将根目录root设置为'/child/'
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://gitee.com/pcguo999/   #网址
-root: / # 网站根目录
-permalink: :year/:month/:day/:title/ # 文章的永久链接
-permalink_defaults: # 永久链接中各部分的默认值</code></pre>
-<h3 id="3-目录配置"><a href="#3-目录配置" class="headerlink" title="3.目录配置"></a>3.目录配置</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># Directory</span>
-<span class="token key atrule">source_dir</span><span class="token punctuation">:</span> source  //资源文件夹，这个文件夹用来存放内容。默认值：source
-<span class="token key atrule">public_dir</span><span class="token punctuation">:</span> public  //公共文件夹，这个文件夹用于存放生成的站点文件。默认值：public
-<span class="token key atrule">tag_dir</span><span class="token punctuation">:</span> tags  //标签文件夹 默认值：tags
-<span class="token key atrule">archive_dir</span><span class="token punctuation">:</span> archives  //归档文件夹 默认值：archives
-<span class="token key atrule">category_dir</span><span class="token punctuation">:</span> categories  //分类文件夹  默认值：categories
-<span class="token key atrule">code_dir</span><span class="token punctuation">:</span> downloads/code  //Include code 文件夹 默认值：downloads/code
-<span class="token key atrule">i18n_dir</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>lang  //国际化（i18n）文件夹 默认值：<span class="token punctuation">:</span>lang
-<span class="token key atrule">skip_render</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true">#  //跳过指定文件的渲染，您可使用glob表达式来匹配路径。</span></code></pre>
-<h3 id="4-文章配置"><a href="#4-文章配置" class="headerlink" title="4.文章配置"></a>4.文章配置</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">new_post_name</span><span class="token punctuation">:</span> <span class="token punctuation">:</span>title.md <span class="token comment" spellcheck="true"># 新文章的文件名称</span>
-<span class="token key atrule">default_layout</span><span class="token punctuation">:</span> post <span class="token comment" spellcheck="true"># 预设布局</span>
-<span class="token key atrule">titlecase</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 将标题转换为title case</span>
-<span class="token key atrule">external_link</span><span class="token punctuation">:</span> 
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 在新标签中打开外部链接</span>
-  <span class="token key atrule">field</span><span class="token punctuation">:</span> site <span class="token comment" spellcheck="true"># 适用于整个站点</span>
-  <span class="token key atrule">exclude</span><span class="token punctuation">:</span> <span class="token string">''</span>
-<span class="token key atrule">filename_case</span><span class="token punctuation">:</span> <span class="token number">0 </span><span class="token comment" spellcheck="true"># 把文件名称转换为 (1) 小写或 (2) 大写</span>
-<span class="token key atrule">render_drafts</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 显示草稿</span>
-<span class="token key atrule">post_asset_folder</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 启动asset文件夹</span>
-<span class="token key atrule">relative_link</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 把链接改为与根目录的相对位址</span>
-<span class="token key atrule">future</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 显示未来的文章</span>
-<span class="token key atrule">highlight</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 代码块的设置</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 启动设置</span>
-  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token comment" spellcheck="true"># 行号</span>
-  <span class="token key atrule">auto_detect</span><span class="token punctuation">:</span> <span class="token boolean important">false </span><span class="token comment" spellcheck="true"># 自动检测</span>
-  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># tab替换</span>
-  <span class="token key atrule">wrap</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">hljs</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></code></pre>
-<h3 id="5-主页设置"><a href="#5-主页设置" class="headerlink" title="5.主页设置"></a>5.主页设置</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 主页设置</span>
-<span class="token comment" spellcheck="true"># path: Root path for your blogs index page. (默认 = '')</span>
-<span class="token comment" spellcheck="true"># per_page: Posts displayed per page. (0 = 关闭分页功能)</span>
-<span class="token comment" spellcheck="true"># order_by: Posts order. (默认情况下按日期降序排序)</span>
-<span class="token key atrule">index_generator</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 索引生成</span>
-  <span class="token key atrule">path</span><span class="token punctuation">:</span> <span class="token string">''</span> <span class="token comment" spellcheck="true"># 路径</span>
-  <span class="token key atrule">per_page</span><span class="token punctuation">:</span> <span class="token number">10 </span><span class="token comment" spellcheck="true"># 每页展示文章数</span>
-  <span class="token key atrule">order_by</span><span class="token punctuation">:</span> <span class="token punctuation">-</span>date <span class="token comment" spellcheck="true"># 排序依据</span></code></pre>
-<h3 id="6-分类-amp-标签"><a href="#6-分类-amp-标签" class="headerlink" title="6.分类 &amp; 标签"></a>6.分类 &amp; 标签</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">default_category</span><span class="token punctuation">:</span> uncategorized <span class="token comment" spellcheck="true"># 默认分类</span>
-<span class="token key atrule">category_map</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 分类别名</span>
-<span class="token key atrule">tag_map</span><span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 标签别名</span></code></pre>
-<h3 id="7-扩展-插件、主题"><a href="#7-扩展-插件、主题" class="headerlink" title="7.扩展-插件、主题"></a>7.扩展-插件、主题</h3><p>更换主题：下载主题后直接解压在themes文件夹中，然后修改theme的值，即可配置成功。配置成功后，在Git Bash Here执行 hexo clean 命令清除一下缓冲</p>
-<p>插件：<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">https://hexo.io/plugins/</a><br>主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
-<pre class=" language-yaml"><code class="language-yaml">切换主题可以修改theme的值
-<span class="token key atrule">theme</span><span class="token punctuation">:</span> matery <span class="token comment" spellcheck="true"># 当前主题名称。值为false时禁用主题</span></code></pre>
-<h3 id="8-Git部署配置"><a href="#8-Git部署配置" class="headerlink" title="8.Git部署配置"></a>8.Git部署配置</h3><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
-  <span class="token key atrule">type</span><span class="token punctuation">:</span> git  <span class="token comment" spellcheck="true">#填git</span>
-  <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//gitee.com/pcguo999/pcguo999.git   <span class="token comment" spellcheck="true">#SSH地址</span>
-  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master  <span class="token comment" spellcheck="true">#分支</span></code></pre>
-<h2 id="二、Hexo命令"><a href="#二、Hexo命令" class="headerlink" title="二、Hexo命令"></a>二、Hexo命令</h2><h3 id="1-初始化文件夹网站"><a href="#1-初始化文件夹网站" class="headerlink" title="1.初始化文件夹网站"></a>1.初始化文件夹网站</h3><pre class=" language-yaml"><code class="language-yaml">//Hexo 默认在目前的文件夹建立网站
-hexo init
-
-//指定文件夹
-hexo init <span class="token punctuation">[</span>folder<span class="token punctuation">]</span></code></pre>
-<h3 id="2-新建一篇文章"><a href="#2-新建一篇文章" class="headerlink" title="2.新建一篇文章"></a>2.新建一篇文章</h3><pre class=" language-yaml"><code class="language-yaml">hexo new "my blog"</code></pre>
-<h3 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h3><pre class=" language-yaml"><code class="language-yaml">hexo generate
-
-//简写
-hexo g
-
-选项  描述
-<span class="token punctuation">-</span>d<span class="token punctuation">,</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>deploy    文件生成后立即部署网站
-<span class="token punctuation">-</span>w<span class="token punctuation">,</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>watch 监视文件变动</code></pre>
-<h3 id="4-发表草稿"><a href="#4-发表草稿" class="headerlink" title="4.发表草稿"></a>4.发表草稿</h3><pre class=" language-yaml"><code class="language-yaml">hexo publish <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> &lt;filename<span class="token punctuation">></span></code></pre>
-<h3 id="5-启动服务器。"><a href="#5-启动服务器。" class="headerlink" title="5.启动服务器。"></a>5.启动服务器。</h3><p>默认情况下，访问网址为： <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<pre class=" language-yaml"><code class="language-yaml">hexo server
-
-//简写
-hexo s
-
-选项  描述
-<span class="token punctuation">-</span>p<span class="token punctuation">,</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>port  重设端口
-<span class="token punctuation">-</span>s<span class="token punctuation">,</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>static    只使用静态文件
-<span class="token punctuation">-</span>l<span class="token punctuation">,</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>log   启动日记记录，使用覆盖记录格式</code></pre>
-<h3 id="6-部署网站"><a href="#6-部署网站" class="headerlink" title="6.部署网站"></a>6.部署网站</h3><pre class=" language-yaml"><code class="language-yaml"> hexo deploy
-
-//简写
-hexo d</code></pre>
-<h3 id="7-查看hexo版本"><a href="#7-查看hexo版本" class="headerlink" title="7.查看hexo版本"></a>7.查看hexo版本</h3><pre class=" language-yaml"><code class="language-yaml">hexo version
-
-//简写 
-hexo v</code></pre>
-<h3 id="8-新建页面"><a href="#8-新建页面" class="headerlink" title="8.新建页面"></a>8.新建页面</h3><pre class=" language-yaml"><code class="language-yaml">//比如说新建标签页面，执行命令之后会在根目录source文件夹下创建tags文件夹
-hexo new page "tags"</code></pre>
-<h2 id="三、Hexo插件安装"><a href="#三、Hexo插件安装" class="headerlink" title="三、Hexo插件安装"></a>三、Hexo插件安装</h2><ul>
-<li>Hexo安装Git插件</li>
-</ul>
-<pre class=" language-yaml"><code class="language-yaml"> npm install <span class="token punctuation">-</span><span class="token punctuation">-</span>save hexo<span class="token punctuation">-</span>deployer<span class="token punctuation">-</span>git</code></pre>
+                <p>图床一般是指储存图片的服务器。因为自建博客需要图片服务器,考虑到用本机的图片服务器需要考虑数据备份链接路径等一系列问题,还是推荐使用第三方的服务。这里讲解的是用Gitee搭建图床，从而让博客添加图片。</p>
+<h2 id="一、配置环境"><a href="#一、配置环境" class="headerlink" title="一、配置环境"></a>一、配置环境</h2><ol>
+<li><p>需要一个码云账户（没有的注册一个）</p>
+</li>
+<li><p>新建一个仓库，配置SSH码</p>
+</li>
+<li><p>本地安装Git，用来提交本地代码到远程仓库</p>
+<p>具体可跳转至<a href="https://pcguo999.gitee.io/2020/03/22/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E7%A0%81%E4%BA%91/" target="_blank" rel="noopener">Hexo搭建博客</a></p>
+</li>
+</ol>
+<h2 id="二、方式一-新建文件方式上传"><a href="#二、方式一-新建文件方式上传" class="headerlink" title="二、方式一 新建文件方式上传"></a>二、方式一 新建文件方式上传</h2><p>在码云上搭建一个空的远程仓库,然后建一个文件夹</p>
+<p>注意：不要轻易修改仓库的名字和文件夹的名字</p>
+<p>然后点击上传文件,进入上传页面,上传一张图片,这个就是我们以后会使用的图床界面</p>
+<p><img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/gitee-images-bed/1.png" alt=""></p>
+<p>其实这个时候可以使用码云库的链接访问了,如果你的库是<code>public</code>的</p>
+<p>你的链接类似这样<code>https://gitee.com/iMist/res/raw/master/images-bed/img_gitee_pages.png</code></p>
+<blockquote>
+<p>注意：图片链接需要将<code>blob</code>替换成<code>raw</code>,才是图片的永久链接</p>
+</blockquote>
+<h2 id="方式二、利用git-连接gitee上传项目"><a href="#方式二、利用git-连接gitee上传项目" class="headerlink" title="方式二、利用git 连接gitee上传项目"></a>方式二、利用git 连接gitee上传项目</h2><p>将所需要的图片直接放在工程中，然后通过git命令上传到gitee</p>
+<p>具体操作请看<a href="">Git使用教程</a></p>
+<p>然后和第一步链接方式一样</p>
+<p>你的链接类似这样<code>https://gitee.com/iMist/res/raw/master/images-bed/img_gitee_pages.png</code></p>
+<p>这种方法比第一种方法上传文件方便，可以快速将很多文件上传至gitee</p>
+<h2 id="方式三-利用码云提供的Gitee-Pages搭建静态页面服务"><a href="#方式三-利用码云提供的Gitee-Pages搭建静态页面服务" class="headerlink" title="方式三:利用码云提供的Gitee Pages搭建静态页面服务"></a>方式三:利用码云提供的Gitee Pages搭建静态页面服务</h2><p>这个可以用来搭建静态博客<code>hexo</code>等,但是我们是要来搭建图床的</p>
+<p>可以自己写前端，也可以直接去网上下载模板，将html、css、js等文件放入工程中</p>
+<p>然后将图片放入images文件中</p>
+<p>点击<code>Gitee Pages</code>,将当前分支一般是master分支作为部署的分支,选择根目录（不填就行了代表整个仓库）,然后点击启动就开始部署了</p>
+<p>部署完成就可以访问之前上传的测试图片,地址像这样<code>https://imist.gitee.io/res/images-bed/img_gitee_pages.png</code></p>
+<p>保留上传链接作为快捷图床服务</p>
+<p><code>https://gitee.com/iMist/res/upload/master/images-bed</code><br>以后就可以快速打开图床了,接口测试工据测试一下,缓存生效了,速度很快,适合静态资源的保存</p>
+<p>也可以通过部署网站，访问图床网页</p>
+<p><code>http://pcguo999.gitee.io/images-bed</code></p>
+<p>这种方式的缺点是每次都要重新部署一下服务才能访问图片,要掏钱才能推送立刻部署，但是可以通过网址查看图床页面</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -586,7 +527,7 @@ hexo new page "tags"</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitee.com/pcguo999/2020/03/21/hexo-config-yml/">https://gitee.com/pcguo999/2020/03/21/hexo-config-yml/</a>
+                    <a href="https://gitee.com/pcguo999/2020/03/22/gitee-da-jian-tu-chuang/">https://gitee.com/pcguo999/2020/03/22/gitee-da-jian-tu-chuang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,8 +565,16 @@ hexo new page "tags"</code></pre>
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/Gitee/">
+                                    <span class="chip bg-color">Gitee</span>
+                                </a>
+                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/Git/">
+                                    <span class="chip bg-color">Git</span>
                                 </a>
                             
                         </div>
@@ -795,7 +744,55 @@ hexo new page "tags"</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/22/hexo-blog/">
+                <a href="/2020/03/23/python-ji-chu/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/python-basics/img.jpg" class="responsive-img" alt="Python基础">
+                        
+                        <span class="card-title">Python基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Python基础
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/22/hexo-da-jian-bo-ke/">
                     <div class="card-image">
                         
                         <img src="https://gitee.com/pcguo999/images-bed/raw/master/blog-images/Hexo-blog/img.jpg" class="responsive-img" alt="Hexo搭建博客-码云">
@@ -810,9 +807,9 @@ hexo new page "tags"</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -828,61 +825,12 @@ hexo new page "tags"</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
                     <a href="/tags/Gitee/">
                         <span class="chip bg-color">Gitee</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/21/markdown-senior/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Markdown高级技巧">
-                        
-                        <span class="card-title">Markdown高级技巧</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Markdown的高级技巧
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>

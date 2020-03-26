@@ -18,8 +18,8 @@
   
   <entry>
     <title>Git使用教程</title>
-    <link href="https://gitee.com/pcguo999/2020/03/23/git-use/"/>
-    <id>https://gitee.com/pcguo999/2020/03/23/git-use/</id>
+    <link href="https://gitee.com/pcguo999/2020/03/23/git-shi-yong-jiao-cheng/"/>
+    <id>https://gitee.com/pcguo999/2020/03/23/git-shi-yong-jiao-cheng/</id>
     <published>2020-03-23T11:56:00.000Z</published>
     <updated>2020-03-25T03:23:19.236Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>Python基础</title>
-    <link href="https://gitee.com/pcguo999/2020/03/23/python-basics/"/>
-    <id>https://gitee.com/pcguo999/2020/03/23/python-basics/</id>
+    <link href="https://gitee.com/pcguo999/2020/03/23/python-ji-chu/"/>
+    <id>https://gitee.com/pcguo999/2020/03/23/python-ji-chu/</id>
     <published>2020-03-23T01:07:00.000Z</published>
     <updated>2020-03-23T11:38:23.549Z</updated>
     
@@ -72,8 +72,8 @@
   
   <entry>
     <title>利用码云搭建图床</title>
-    <link href="https://gitee.com/pcguo999/2020/03/22/gitee-images-bed/"/>
-    <id>https://gitee.com/pcguo999/2020/03/22/gitee-images-bed/</id>
+    <link href="https://gitee.com/pcguo999/2020/03/22/gitee-da-jian-tu-chuang/"/>
+    <id>https://gitee.com/pcguo999/2020/03/22/gitee-da-jian-tu-chuang/</id>
     <published>2020-03-22T01:20:00.000Z</published>
     <updated>2020-03-23T11:27:10.443Z</updated>
     
@@ -94,18 +94,18 @@
       <category term="Gitee" scheme="https://gitee.com/pcguo999/categories/Gitee/"/>
     
     
-      <category term="Git" scheme="https://gitee.com/pcguo999/tags/Git/"/>
+      <category term="Gitee" scheme="https://gitee.com/pcguo999/tags/Gitee/"/>
     
       <category term="Hexo" scheme="https://gitee.com/pcguo999/tags/Hexo/"/>
     
-      <category term="Gitee" scheme="https://gitee.com/pcguo999/tags/Gitee/"/>
+      <category term="Git" scheme="https://gitee.com/pcguo999/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Hexo搭建博客-码云</title>
-    <link href="https://gitee.com/pcguo999/2020/03/22/hexo-blog/"/>
-    <id>https://gitee.com/pcguo999/2020/03/22/hexo-blog/</id>
+    <link href="https://gitee.com/pcguo999/2020/03/22/hexo-da-jian-bo-ke/"/>
+    <id>https://gitee.com/pcguo999/2020/03/22/hexo-da-jian-bo-ke/</id>
     <published>2020-03-22T01:07:00.000Z</published>
     <updated>2020-03-23T11:43:10.800Z</updated>
     
@@ -125,16 +125,16 @@
       <category term="Hexo" scheme="https://gitee.com/pcguo999/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="https://gitee.com/pcguo999/tags/Hexo/"/>
-    
       <category term="Gitee" scheme="https://gitee.com/pcguo999/tags/Gitee/"/>
+    
+      <category term="Hexo" scheme="https://gitee.com/pcguo999/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo相关配置和使用</title>
-    <link href="https://gitee.com/pcguo999/2020/03/21/hexo-config-yml/"/>
-    <id>https://gitee.com/pcguo999/2020/03/21/hexo-config-yml/</id>
+    <link href="https://gitee.com/pcguo999/2020/03/21/hexo-xiang-guan-pei-zhi/"/>
+    <id>https://gitee.com/pcguo999/2020/03/21/hexo-xiang-guan-pei-zhi/</id>
     <published>2020-03-21T13:07:00.000Z</published>
     <updated>2020-03-22T05:26:21.742Z</updated>
     
@@ -160,8 +160,8 @@
   
   <entry>
     <title>Markdown高级技巧</title>
-    <link href="https://gitee.com/pcguo999/2020/03/21/markdown-senior/"/>
-    <id>https://gitee.com/pcguo999/2020/03/21/markdown-senior/</id>
+    <link href="https://gitee.com/pcguo999/2020/03/21/markdown-gao-ji/"/>
+    <id>https://gitee.com/pcguo999/2020/03/21/markdown-gao-ji/</id>
     <published>2020-03-21T10:07:00.000Z</published>
     <updated>2020-03-23T02:29:28.840Z</updated>
     
@@ -187,8 +187,8 @@
   
   <entry>
     <title>Markdown基础语法</title>
-    <link href="https://gitee.com/pcguo999/2020/03/20/markdown-basics/"/>
-    <id>https://gitee.com/pcguo999/2020/03/20/markdown-basics/</id>
+    <link href="https://gitee.com/pcguo999/2020/03/20/markdown-ji-chu/"/>
+    <id>https://gitee.com/pcguo999/2020/03/20/markdown-ji-chu/</id>
     <published>2020-03-20T08:40:00.000Z</published>
     <updated>2020-03-23T11:41:37.767Z</updated>
     
